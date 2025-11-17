@@ -7,12 +7,18 @@ public class LabActivity2 {
         System.out.print("Enter a positive number: ");
         int limit = sc.nextInt();
 
-        int sum = 0;
-        int i = 1;    
+        if (limit <= 0 || !(limit > 0)) {
+            System.out.println("Invalid input! Number must be positive.");
+            sc.close();
+            return; 
+        }
 
-        while (i <= limit) {
-            sum = sum + i;  
-            i = i + 1;     
+        int sum = 0;
+        int i = 1;
+
+        while (i <= limit && i > 0) {  \
+            sum = sum + i;
+            i = i + 1;
         }
 
         System.out.println("The sum of natural numbers up to " + limit + " is: " + sum);
